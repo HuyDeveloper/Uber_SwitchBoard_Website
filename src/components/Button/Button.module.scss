@@ -80,5 +80,12 @@
 
 .large {
     padding: 14px 16px;
-    min-width: 140px;
+    width: 90%;
+    background-color: rgb(27, 82, 144);
+    margin-top: 20px;
+    color: #fff;
+    border: none;
+    &:hover {
+        background-color: rgb(79, 124, 175);
+    }
 }
