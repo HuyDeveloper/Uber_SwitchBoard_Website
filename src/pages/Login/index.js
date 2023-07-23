@@ -1,15 +1,20 @@
 import classNames from 'classnames/bind';
 import styles from './login.module.scss';
 import Button from '~/components/Button';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 const cx = classNames.bind(styles);
 
 function Login() {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
-    console.log(phone, password);
+    const { loginAdmin } = useContext(AuthContext);
     const handleSubmit = () => {
-        console.log('Input value:', phone, password);
+        if (phone.length == 0 || password.length == 0) {
+            alert('Your information is not invalid!');
+        } else {
+            loginAdmin(phone, password);
+        }
     };
     return (
         <div className={cx('wrapper')}>
