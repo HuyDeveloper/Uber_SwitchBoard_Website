@@ -1,0 +1,108 @@
+.biggest {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.wrapper {
+    margin: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 70%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.second-inner {
+    padding: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+input {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: fit-content;
+    border-radius: 7px;
+    position: absolute;
+    background-color: white;
+    margin-left: 200px;
+}
+li {
+    font-weight: 500;
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+    &:hover {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fcfcfc;
+        border-radius: 7px;
+    }
+}
+.locationIcon {
+    margin-right: 10px;
+    color: red;
+    font-size: large;
+}
+
+.submit {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: #1a1a1c;
+        opacity: 0.8;
+    }
+}
+.back-home {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: #000000dd;
+        color: #fff;
+        opacity: 0.8;
+    }
+}
+.total {
+    background-color: red;
+}

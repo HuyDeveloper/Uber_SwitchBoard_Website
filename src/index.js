@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from '~/components/GlobalStyles';
 import { AuthProvider } from './contexts/AuthContext';
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+ReactDOM.render(
     <React.StrictMode>
         <GlobalStyles>
             <AuthProvider>
@@ -13,6 +13,7 @@ root.render(
             </AuthProvider>
         </GlobalStyles>
     </React.StrictMode>,
+    document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function

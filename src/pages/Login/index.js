@@ -2,10 +2,12 @@ import classNames from 'classnames/bind';
 import styles from './login.module.scss';
 import Button from '~/components/Button';
 import { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthContext';
 const cx = classNames.bind(styles);
 
 function Login() {
+    let navigate = useNavigate();
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
     const { loginAdmin } = useContext(AuthContext);
@@ -14,6 +16,7 @@ function Login() {
             alert('Your information is not invalid!');
         } else {
             loginAdmin(phone, password);
+            navigate('/');
         }
     };
     return (
@@ -39,7 +42,7 @@ function Login() {
                             name="password"
                             placeholder="Password"
                         />
-                        <Button type="submit" primary rounded large>
+                        <Button primary rounded large>
                             Log in
                         </Button>
                     </div>
