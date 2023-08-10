@@ -6,14 +6,21 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
     const [userInfo, setUserInfo] = useState({});
     const loginAdmin = (phone, password) => {
-        axios
-            .post(`/users/login-admin`, {
+        fetch(`/users/login-admin`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
                 phone: phone,
                 password: password,
-            })
-            .then((response) => {
-                setUserInfo(response.data.result);
-                localStorage.setItem('userInfo', JSON.stringify(response.data.result));
+            }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setUserInfo(data.result);
+                console.log(data.result);
+                localStorage.setItem('userInfo', JSON.stringify(data.result));
             })
             .catch((error) => {
                 console.error(error);
