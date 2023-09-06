@@ -53,9 +53,19 @@ const Directions = ({ origin, destination }) => {
     return (
         <>
             {distance && (
-                <div style={{ backgroundColor: 'red' }} className={cx('total')}>
-                    <p>Distance: {Math.round(distance)}km</p>
-                    <p>Price: {Math.round(distance * 6)}.000vnđ</p>
+                <div style={{ backgroundColor: '#eff8f3', border:'1px solid black' ,borderRadius:'10px',height:150,width:400 ,marginBottom:50,marginLeft:15}} className={cx('total')}>
+                    <div style={{textAlign:'center'}}>
+                        <h2>Information</h2>
+                    </div>
+                    <div style={{paddingLeft:20,paddingBottom:20,paddingTop:20}}>
+                        <h4>Distance: {Math.round(distance)}km</h4>
+                    </div>
+                    <div style={{paddingLeft:20}}>
+                        <h4>Price: {Math.round(distance * 6)}.000vnđ</h4>
+
+                    </div>
+                    
+                    
                 </div>
             )}
         </>

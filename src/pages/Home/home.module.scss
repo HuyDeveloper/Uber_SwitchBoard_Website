@@ -1,0 +1,39 @@
+.submit {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 200px;
+    padding-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #000000;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: #1a1a1c;
+        opacity: 0.8;
+    }
+}
+.info{
+    
+    cursor: pointer;
+    &:hover {
+        background-color: #000000dd;
+        color: #fff;
+        opacity: 0.8;
+    }
+   
+}
+.dowload{
+    cursor: pointer;
+    height: 5px;
+    &:hover {
+        background-color: #000000dd;
+        color: #fff;
+        opacity: 0.8;
+    }
+}

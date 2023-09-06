@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import DefaultLayout from '~/components/Layout/DefaultLayout';
 import LoginLayout from '~/components/Layout/LoginLayout';
 import { AuthContext } from '~/contexts/AuthContext';
@@ -43,10 +43,13 @@ function App() {
                     <Route
                         key={3}
                         path="/booking-cars"
-                        element={
+                        element={ userInfo.access_token ?
+                            
                             <LoginLayout>
                                 <Cars />
                             </LoginLayout>
+                            :
+                            <Navigate replace to={"/login"} />
                         }
                     />
                 </Routes>

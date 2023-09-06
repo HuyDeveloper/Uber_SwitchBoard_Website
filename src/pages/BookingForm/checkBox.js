@@ -36,19 +36,21 @@ function CheckBox({ onSelect }) {
         }
     };
     return (
-        <div className={cx('checkbox-container')}>
-            <label className={cx('checkbox-label')}>
-                <FontAwesomeIcon className={cx('icon')} icon={faCar} />
+        <div className={cx('checkbox-container')} >
+            <label className={cx('checkbox-label')} style={{padding:10,marginRight:10}}>
                 <input
                     type="checkbox"
                     checked={checkbox1}
                     onChange={handleCheckbox1Change}
                     className={cx('checkbox-input')}
                 />
+
                 <span className={cx('checkbox-custom')}></span>
+                <FontAwesomeIcon className={cx('icon')} icon={faCar} />
                 Car 4 seats
             </label>
-            <label className={cx('checkbox-label')}>
+            <label className={cx('checkbox-label')} style={{padding:10,marginRight:10}}>
+
                 <input
                     type="checkbox"
                     checked={checkbox2}
@@ -56,10 +58,11 @@ function CheckBox({ onSelect }) {
                     className={cx('checkbox-input')}
                 />
                 <span className={cx('checkbox-custom')}></span>
+                <FontAwesomeIcon className={cx('icon')} icon={faCar} />
                 Car 7 seats
             </label>
-            <label className={cx('checkbox-label')}>
-                <FontAwesomeIcon className={cx('icon')} icon={faMotorcycle} />
+            <label className={cx('checkbox-label')} style={{padding:10,marginRight:10}}>
+              
                 <input
                     type="checkbox"
                     checked={checkbox3}
@@ -67,6 +70,7 @@ function CheckBox({ onSelect }) {
                     className={cx('checkbox-input')}
                 />
                 <span className={cx('checkbox-custom')}></span>
+                <FontAwesomeIcon className={cx('icon')} icon={faMotorcycle} />
                 Motorbike
             </label>
         </div>

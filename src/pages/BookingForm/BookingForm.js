@@ -89,19 +89,19 @@ function BookingForm() {
             {bookingSuccess && <div className={cx('booking-success')}>Booking thành công!</div>}
             <form className={cx('wrapper')} onSubmit={handleSubmit}>
                 <div className={cx('inner')}>
-                    <div style={{ display: 'flex', flexDirection: 'row' }}>
-                        <FontAwesomeIcon className={cx('locationIcon')} icon={faLocationDot} />
-                        <label htmlFor="start">Pickup Location:</label>
+                    <div style={{ display: 'flex', flexDirection: 'row', paddingLeft:20,paddingBottom:5 }}>
+                        <FontAwesomeIcon style={{}} className={cx('locationIcon')} icon={faLocationDot} />
+                        <label style={{}}  htmlFor="start">Pickup Location:</label>
                     </div>
-                    <SearchBar onSelect={handleSelectPickUp} />
-                    <div style={{ display: 'flex', flexDirection: 'row' }}>
-                        <FontAwesomeIcon style={{ color: 'green', fontWeight: 'bold' }} icon={faCheck} />
+                    <SearchBar  onSelect={handleSelectPickUp} />
+                    <div style={{ display: 'flex', flexDirection: 'row',paddingLeft:20,paddingBottom:5, paddingTop:10 }}>
+                        <FontAwesomeIcon style={{ color: 'green', fontWeight: 'bold',paddingRight:5}} icon={faLocationDot} />
                         <label htmlFor="start">Destination:</label>
                     </div>
                     <SearchBar onSelect={handleSelectDestination} />
-                    <label htmlFor="name">Customer Name:</label>
+                    <label style={{paddingLeft:20,paddingBottom:5, paddingTop:10}} htmlFor="name">Customer Name:</label>
                     <input value={name} onChange={(e) => setName(e.target.value)} id="name" placeholder="Enter name" />
-                    <label htmlFor="phone">Phone Number:</label>
+                    <label style={{paddingLeft:20,paddingBottom:5, paddingTop:10}} htmlFor="phone">Phone Number:</label>
                     <input
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
@@ -110,8 +110,10 @@ function BookingForm() {
                     />
                     <CheckBox onSelect={handleType} />
                     <button className={cx('back-home')} type="button">
-                        <FontAwesomeIcon icon={faArrowLeft} />
-                        Back to home
+                        <FontAwesomeIcon icon={faArrowLeft} style={{marginLeft:10,marginRight:100}}/>
+                   
+                                Back to home
+
                     </button>
                 </div>
                 <div className={cx('second-inner')}>
