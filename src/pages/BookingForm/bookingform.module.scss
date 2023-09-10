@@ -115,3 +115,15 @@ li {
     padding: 10px;
     margin-top: 10px;
 }
+.inputs{
+    display: flex;
+
+    gap: 1em;
+
+}
+.inputs input{
+    width: 3.5em;
+    font-size: 1.3em;
+    border: 1px solid #ccc;
+    margin-right: 0;
+}

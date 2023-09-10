@@ -43,14 +43,20 @@ function App() {
                     <Route
                         key={3}
                         path="/booking-cars"
-                        element={ userInfo.access_token ?
+                        // element={ userInfo.access_token ?
                             
+                        //     <LoginLayout>
+                        //         <Cars />
+                        //     </LoginLayout>
+                        //     :
+                        //     <Navigate replace to={"/login"} />
+                        // }
+                        element={
                             <LoginLayout>
                                 <Cars />
                             </LoginLayout>
-                            :
-                            <Navigate replace to={"/login"} />
                         }
+                        
                     />
                 </Routes>
             </div>
